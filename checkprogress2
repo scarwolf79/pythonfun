@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+
+import shutil
+import subprocess
+import os
+
+thistuple = shutil.disk_usage("/x")
+
+# fssource = thistuple[1]
+fssource = shutil.disk_usage("/y")[1]
+fsdestin = shutil.disk_usage("/x")[1]
+# print(fssource)
+# print(fsdestin)
+
+numfss = int(fssource)
+numfsd = int(fsdestin)
+
+percentage = 100*(numfsd/numfss)
+
+print("%9d of %9d completed.\n %3.2f%%" % (numfsd, numfss, percentage))
+
+
+
+
+
+
