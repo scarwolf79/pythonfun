@@ -9,7 +9,7 @@ for a in range(10, 100):
             intermcalcval=a+(bigb/10)
             calcval=intermcalcval/10
             loga=math.log10(calcval)
-            print('{0:16.6f}'.format(loga), end="" )
+            print('{0:16.10f}'.format(loga), end="" )
         except:
             print('{0:16}'.format("   ---"), end="" )
     print("")
